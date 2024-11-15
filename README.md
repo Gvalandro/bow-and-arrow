@@ -1,82 +1,18 @@
-PDCurses
-========
+# bow-and-arrow
+Implementação do jogo [Bow and Arrow - In Search of the Greatest Archer](https://www.classicdosgames.com/game/Bow_and_Arrow_-_In_Search_of_the_Greatest_Archer.html), feita em C usando arte ASCII. Trabalho final da disciplina de Algoritmos e Programação da UFRGS, semestre 2020/1.
 
-Stable: [v3.9]  
-Current: [See git repository][git]
+# Dependências
+* Windows: usa a biblioteca [PDCursesMod](https://www.projectpluto.com/win32a.htm). O código pode ser encontrado na [página do GitHub do projeto](https://github.com/Bill-Gray/PDCursesMod). Esse repositório inclui a versão para wincon 64 bits, compilada com a versão 4.2.0.
+* Linux: usa a biblioteca [ncurses](https://invisible-island.net/ncurses/), que vem pré-instalada na maioria das distribuições.
 
-PDCurses is a public domain curses library for [DOS], [OS/2], [Windows]
-console, [X11] and [SDL], implementing most of the functions available in
-[X/Open] and System V R4 curses, and supporting a variety of compilers for
-these platforms. The X11 and SDL ports let you recompile existing
-text-mode curses programs to produce GUI applications.
-
-PDCurses is distributed mainly as source code, but some pre-compiled
-libraries may be available.
-
-The latest version can be found at:
-
-   <https://pdcurses.org/>
-
-For changes, see the [History] file. The main documentation is now in the
-[docs] directory.
-
-
-Mailing lists
--------------
-
-There's a low-traffic mailing list for announcements and discussion. To
-subscribe, email the [list server], with the first line of the body of
-the message containing:
-
-`subscribe pdcurses-l`
-
-or you can read the mailing list [archive].
-
-
-Other links
------------
-
-* [Docs][docs]
-* [GitHub Page][git]
-* [SourceForge Page]
-* [X/Open] curses
-
-
-Legal Stuff
------------
-
-The core package and most ports are in the public domain, but a few files
-in the [demos] and [X11][xstatus] directories are subject to copyright
-under licenses described there.
-
-This software is provided AS IS with NO WARRANTY whatsoever.
-
-
-Maintainer
-----------
-
-[William McBrine]
-
-
-[v3.9]: https://github.com/wmcbrine/PDCurses/releases/tag/3.9
-[git]: https://github.com/wmcbrine/PDCurses
-
-[History]: docs/HISTORY.md
-[docs]: docs/README.md
-
-[list server]: mailto:majordomo@lightlink.com
-[archive]: https://www.mail-archive.com/pdcurses-l@lightlink.com/
-
-[SourceForge Page]: https://sourceforge.net/projects/pdcurses
-[X/Open]: https://pubs.opengroup.org/onlinepubs/007908799/cursesix.html
-
-[DOS]: dos/README.md
-[OS/2]: os2/README.md
-[SDL]: sdl2/README.md
-[Windows]: wincon/README.md
-[X11]: x11/README.md
-
-[demos]: demos/README.md#distribution-status
-[xstatus]: x11/README.md#distribution-status
-
-[William McBrine]: https://wmcbrine.com/
+# Compilação:
+```bash
+git clone https://github.com/klement01/bow-and-arrow
+cd bow-and-arrow
+make
+```
+Isso irá gerar os executáveis para Linux do jogo e do editor no diretório do repositório. Para compilar para Windows (no Linux):<br>
+```bash
+make WINDOWS=1
+```
+Por padrão, usa o compilador de 64 bits do MinGW.
