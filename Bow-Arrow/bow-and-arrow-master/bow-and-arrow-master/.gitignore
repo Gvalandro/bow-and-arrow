@@ -1,0 +1,6 @@
+.vscode
+materiais/highscores.bin
+obj
+/bow-and-arrow*
+/editor*
+/*.zip
